@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@layer components {
+    .title-darkMode {
+      @apply py-12 font-medium text-[#dbdad4] text-[1rem] md:text-[1.05rem];
+    }
+
+    .title-lightMode {
+      @apply py-12 font-semibold text-[#686767] text-[1rem] md:text-[1.05rem];
+    }
+
+    .img-lightMode {
+        @apply mx-2 cursor-pointer hover:w-40 hover:h-40 lg:hover:w-56 lg:hover:h-56  hover:shadow-2xl hover:shadow-zinc-900 rounded-full inline w-8 h-8 lg:w-16 lg:h-16 md:w-12 md:h-12;
+    }
+
+    .img-darkMode {
+        @apply mx-2 cursor-pointer hover:w-40 hover:h-40 lg:hover:w-56 lg:hover:h-56  hover:shadow-2xl hover:shadow-[#535252] rounded-full inline w-8 h-8 lg:w-16 lg:h-16 md:w-12 md:h-12;
+    }
+
+    .para-darkMode {
+        @apply xl:w-[70vw] text-white text-[1.8rem] sm:text-[35px] lg:text-[45px] font-medium;
+    }
+
+    .para-lightMode {
+        @apply xl:w-[70vw] text-[#1A1917] text-[1.8rem] sm:text-[35px] lg:text-[45px] font-medium;
+    }
+
+    /* Header Navbar */
+    .a-lightMode {
+      @apply py-4 px-11 border-2 border-[#363535] rounded-full text-xl hover:bg-[#1D1D1B] hover:text-white;
+    }
+
+    .a-darkMode {
+      @apply py-4 px-11 border-2 border-white rounded-full text-white text-xl hover:bg-white hover:text-[#363535];
+    }
+
+    /* Footer Navbar */
+    .class-lightMode {
+      @apply fixed bottom-[-50%] text-base border border-[#1D1D1B] bg-[#1D1D1B] text-[#eeece8] font-semibold rounded-full w-max md:py-[0.51rem] md:px-[2rem] -translate-x-[50%] left-[50%] shadow-2xl shadow-black
+    }
+
+    .class-darkMode {
+      @apply fixed bottom-[-50%] text-base border border-white bg-white text-[#1D1D1B] font-semibold rounded-full w-max md:py-[0.51rem] md:px-[2rem] -translate-x-[50%] left-[50%] shadow-2xl shadow-black
+    }
+
+    .liClass-darkMode {
+      @apply mx-4 xsm:mx-5 md:mx-6 hover:border-b-2 hover:border-solid hover:border-b-black;
+    }
+
+    .liClass-lightMode {
+      @apply mx-4 xsm:mx-5 md:mx-6 hover:border-b-2 hover:border-solid;
+    }
+  }
+
+
+@tailwind utilities;
